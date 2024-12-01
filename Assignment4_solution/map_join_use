@@ -1,0 +1,52 @@
+The line `print("".join(map(str, row)))` is used to format and print each row of a matrix as a single line of characters, without any spaces or other delimiters between the elements. Here's a detailed explanation of each part:
+
+---
+
+### **1. `map(str, row)`**
+- **Purpose**: Converts each element in the list `row` to a string.
+- **How it works**:
+  - `row` is a list of integers (e.g., `[0, 0, 1, 1]`).
+  - `map(str, row)` applies the `str` function to each element of the list, resulting in an iterator of strings (e.g., `['0', '0', '1', '1']`).
+
+---
+
+### **2. `"".join(...)`**
+- **Purpose**: Concatenates the elements of an iterable (in this case, the strings from `map(str, row)`) into a single string, using an empty string (`""`) as the separator.
+- **How it works**:
+  - Takes the list `['0', '0', '1', '1']`.
+  - Joins them into the string `"0011"` (no spaces or separators are added).
+
+---
+
+### **3. `print(...)`**
+- **Purpose**: Prints the resulting string.
+- **Result**:
+  - Instead of printing the row as a list (e.g., `[0, 0, 1, 1]`), it prints the row as a single continuous string: `0011`.
+
+---
+
+### **Step-by-Step Example**:
+Suppose `row = [0, 0, 1, 1]`.
+
+1. **Mapping to Strings**:
+   ```python
+   map(str, row)  # Converts each element to a string: ['0', '0', '1', '1']
+   ```
+
+2. **Joining Strings**:
+   ```python
+   "".join(['0', '0', '1', '1'])  # Joins the list into "0011"
+   ```
+
+3. **Printing**:
+   ```python
+   print("0011")  # Outputs: 0011
+   ```
+
+---
+
+### Why Use This?
+- It provides a compact way to display rows of a matrix as single lines of characters, especially useful for binary matrices like this one.
+- Without `join()`, printing the row directly would include list formatting (e.g., `[0, 0, 1, 1]`).
+
+Let me know if you'd like further clarifications!
