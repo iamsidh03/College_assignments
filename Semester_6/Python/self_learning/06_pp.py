@@ -21,7 +21,12 @@ class Book:
         self.titles=titles
         self.author=author
         self.copies=copies
-
+    def is_available(self):
+        if self.copies>0:
+            return True
+        else:
+            return False
+        
 
 
 # ✅ Class 2: Library
@@ -42,7 +47,11 @@ class Book:
 
 # return_book(book_id)
 # ➤ Increases the number of copies by 1
-
+class Library:
+    def __init__(self):
+        self.books=[]
+    add_books(self,book):
+    
 # show_books()
 # ➤ Display all books with:
 # "ID: <id> | Title: <title> | Author: <author> | Available Copies: <copies>"
