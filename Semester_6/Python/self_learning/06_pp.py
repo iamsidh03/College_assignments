@@ -1,6 +1,7 @@
 # 📚 Library Management System – Problem Statement (Medium-Hard)
 # 🎯 Objective:
-# Build a system to manage books in a library using OOP principles. Each book should have a unique ID, and the system should allow borrowing, returning, adding, removing, and listing books.
+# Build a system to manage books in a library using OOP principles.
+#  Each book should have a unique ID, and the system should allow borrowing, returning, adding, removing, and listing books.
 
 # ✅ Class 1: Book
 # Attributes:
@@ -50,7 +51,23 @@ class Book:
 class Library:
     def __init__(self):
         self.books=[]
-    add_books(self,book):
+    def  add_books(self,book):
+            for b in self.book:
+                 if b.book_id==self.book_id:
+                      b.copies+=1
+                      print(f'{b.titles} has {b.copies} copies')
+                      return
+            self.books.append(book)
+            print(f'{b.title} is added')
+    def remove_book(self,book_id):
+         for b in self.books:
+               if b.book_id==self.book_id:
+                      self.books.remove(b)
+                      print(f'{b.titles} is removed ')
+                      return
+               
+         print(f"No book with ID {book_id} found.")
+             
     
 # show_books()
 # ➤ Display all books with:
